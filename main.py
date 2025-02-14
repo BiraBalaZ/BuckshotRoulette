@@ -14,21 +14,15 @@ import random
 playerLife = 3
 iaLife = 3
 
-ammo = random.randrange(1, 8)
-if ammo == 1:
-    ammo = ['Real', 'Festim', 'Real', 'Festim', 'Real', 'Festim']
-elif ammo == 2:
-    ammo = ['Festim', 'Real', 'Festim']
-elif ammo == 3:
-    ammo = ['Real', 'Festim', 'Real', 'Real']
-elif ammo == 4:
-    ammo = ['Real', 'Festim']
-elif ammo == 5:
-    ammo = ['Real', 'Festim', 'Real', 'Real']
-elif ammo == 6:
-    ammo = ['Festim', 'Festim', 'Real', 'Real']
-elif ammo == 7:
-    ammo = ['Festim', 'Festim', 'Festim', 'Festim', 'Real', 'Real']
+ammo = ['Festim', 'Real']
+
+# Inserindo a munição na shotgun
+for i in range(random.randrange(1, 5)):
+    # Decide se será Real ou de Festim
+    bullet = 'Festim' if random.randrange(0, 2) == 0 else 'Real'
+
+    # Adiciona à lista ammo
+    ammo.append(bullet = 'Festim' if random.randrange(0, 2) == 0 else 'Real')
 
 while (iaLife > 0 or playerLife > 0) and len(ammo) > 0:
     system('cls')
